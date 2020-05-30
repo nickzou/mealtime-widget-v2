@@ -1,0 +1,31 @@
+@import './scss/utilities';
+
+.mealtime-container {
+  position: fixed;
+  bottom: 12px;
+  right: 12px;
+}
+
+.button {
+  @extend %button;
+}
+
+.button-icon {
+  svg {
+    height: 12px;
+    width: 12px;
+  }
+}
+
+h1,h2,h3,h4,h5,h6, p {
+  margin: 0;
+}
+
+p {
+  @extend %text-paragraph;
+}
+
+.section-title {
+  @extend %text-section-title;
+  margin: 10px 0;
+}

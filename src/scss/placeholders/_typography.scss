@@ -1,0 +1,35 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather+Sans:wght@300;400;700&display=swap');
+
+%text {
+    font-family: 'Merriweather Sans', sans-serif;
+}
+
+%text-small {
+    @extend %text;
+    font-size: 10px;
+    line-height: 10px;
+    font-weight: 300;
+}
+
+%text-paragraph {
+    @extend %text;
+    font-size: 12px;
+    line-height: 18px;
+    font-weight: 400;
+}
+
+%text-section-title {
+    @extend %text;
+    font-size: 18px;
+    line-height: 22px;
+    font-weight: bold;
+}
+
+%text-fab-button {
+    @extend %text;
+    font-size: 20px;
+    font-weight: bold;
+    color: white;
+    text-transform: uppercase;
+    text-shadow: 1px 1px 0px rgba($indigo, 0.45);
+}

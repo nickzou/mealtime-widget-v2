@@ -1,0 +1,10 @@
+@import '../../scss/utilities';
+
+.footer {
+    @extend %text-small;
+    color: white;
+    padding: 5px;
+    flex-shrink: 0;
+    background-color: $turquoise;
+    text-align: center;
+}
