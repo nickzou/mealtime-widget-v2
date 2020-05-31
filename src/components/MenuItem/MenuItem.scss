@@ -23,10 +23,6 @@
         @extend %text-item-price;
     }
     .item-description {
-        @extend %text;
-        font-size: 12px;
-        line-height: 16px;
-        font-weight: light;
-        color: $grey;
+        @extend %text-item-info;
     }
 }

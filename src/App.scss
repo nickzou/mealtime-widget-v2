@@ -8,6 +8,11 @@
 
 .button {
   @extend %button;
+  text-transform: uppercase;
+  &.blue {
+    background-color: $blue;
+    color: white;
+  }
 }
 
 .button-icon {
@@ -15,6 +20,13 @@
     height: 12px;
     width: 12px;
   }
+}
+
+.button-small {
+  padding-left: 20px;
+  padding-right: 20px;
+  height: 20px;
+  border-radius: 10px;
 }
 
 h1,h2,h3,h4,h5,h6, p {
@@ -28,4 +40,8 @@ p {
 .section-title {
   @extend %text-section-title;
   margin: 10px 0;
+}
+
+.modifier-title {
+  @extend %text-modifier-title;
 }

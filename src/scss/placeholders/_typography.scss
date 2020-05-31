@@ -32,6 +32,21 @@
     font-weight: bold;
 }
 
+%text-modifier-title {
+    @extend %text;
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: bold;
+}
+
+%text-item-info {
+    @extend %text;
+    font-size: 12px;
+    line-height: 16px;
+    font-weight: light;
+    color: $grey;
+}
+
 %text-fab-button {
     @extend %text;
     font-size: 20px;

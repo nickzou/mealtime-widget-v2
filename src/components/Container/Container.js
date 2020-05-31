@@ -4,10 +4,10 @@ import FABButton from '../FABButton/FABButton';
 import {Context} from '../../Context';
 
 const Container = () => {
-  let [state, setState] = React.useContext(Context).widget;
+  let [widget, setWidget] = React.useContext(Context).widget;
   return (
     <div className="mealtime-container">
-        {!!state.open && <Widget />}
+        {!!widget.open && <Widget />}
         <FABButton />
     </div>
   );
