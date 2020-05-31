@@ -4,8 +4,7 @@ import FABButton from '../FABButton/FABButton';
 import {Context} from '../../Context';
 
 const Container = () => {
-  let globalState = React.useContext(Context);
-  let [state, setState] = globalState.widget;
+  let [state, setState] = React.useContext(Context).widget;
   return (
     <div className="mealtime-container">
         {!!state.open && <Widget />}

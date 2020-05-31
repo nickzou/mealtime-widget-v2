@@ -11,12 +11,16 @@
     }
     .right {
         flex-basis: 30%;
+        text-align: right;
     }
     .item-title {
         @extend %text;
         font-size: 14px;
         line-height: 20px;
         font-weight: bold;
+    }
+    .item-price {
+        @extend %text-item-price;
     }
     .item-description {
         @extend %text;

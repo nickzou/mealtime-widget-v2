@@ -25,6 +25,13 @@
     font-weight: bold;
 }
 
+%text-item-price {
+    @extend %text;
+    font-size: 16px;
+    line-height: 20px;
+    font-weight: bold;
+}
+
 %text-fab-button {
     @extend %text;
     font-size: 20px;

@@ -12,9 +12,7 @@ const FeaturedView = () => {
             {!!menu_items && menu_items.map((item,index) => {if(!!item.featured) {
                 return <MenuItem 
                     key={index}
-                    name={item.name}
-                    description={item.description}
-                    price={item.base_price}
+                    item={item}
                     calories={`${item.calories.min} - ${item.calories.max}`}
                 />}})}
         </div>

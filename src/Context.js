@@ -108,7 +108,8 @@ export const Provider = props => {
         ]
     });
     const order = React.useState({
-        location: null
+        location: null,
+        activeItem: null
     });
     return(
         <Context.Provider value={{widget: widget, restaurant: restaurant, order: order}}>
