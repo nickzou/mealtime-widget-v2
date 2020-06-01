@@ -22,7 +22,8 @@ export const Provider = props => {
                 base_price: 8.95,
                 modifiers: ['size', 'tortilla', 'beans', 'cheese', 'other toppings', 'salsa', 'spice level', 'extras'],
                 calories: { min: 530, max: 1350 },
-                featured: true
+                featured: true,
+                selected_modifiers: []
             },
             {
                 name: 'Steak Burrito',
@@ -31,7 +32,8 @@ export const Provider = props => {
                 base_price: 8.95,
                 modifiers: ['size', 'tortilla', 'beans', 'cheese', 'other toppings', 'salsa', 'spice level', 'extras'],
                 calories: { min: 640, max: 1510 },
-                featured: true
+                featured: true,
+                selected_modifiers: []
             },
             {
                 name: 'Pulled Pork Burrito',
@@ -40,7 +42,8 @@ export const Provider = props => {
                 base_price: 8.95,
                 modifiers: ['size', 'tortilla', 'beans', 'cheese', 'other toppings', 'salsa', 'spice level', 'extras'],
                 calories: { min: 640, max: 1510 },
-                featured: true
+                featured: true,
+                selected_modifiers: []
             },
             {
                 name: 'Calamari Burrito',
@@ -49,7 +52,8 @@ export const Provider = props => {
                 base_price: 8.95,
                 modifiers: ['size', 'tortilla', 'beans', 'cheese', 'other toppings', 'salsa', 'spice level', 'extras'],
                 calories: { min: 430, max: 1180 },
-                featured: true
+                featured: true,
+                selected_modifiers: []
             },
             {
                 name: 'Sweet Potato Burrito',
@@ -58,7 +62,8 @@ export const Provider = props => {
                 base_price: 8.95,
                 modifiers: ['size', 'tortilla', 'beans', 'cheese', 'other toppings', 'salsa', 'spice level', 'extras'],
                 calories: { min: 380, max: 1130 },
-                featured: false
+                featured: false,
+                selected_modifiers: []
             },
             {
                 name: 'Ground Soy Burrito',
@@ -67,7 +72,8 @@ export const Provider = props => {
                 base_price: 8.95,
                 modifiers: ['size', 'tortilla', 'beans', 'cheese', 'other toppings', 'salsa', 'spice level', 'extras'],
                 calories: { min: 370, max: 1120 },
-                featured: false
+                featured: false,
+                selected_modifiers: []
             },
             {
                 name: 'Bean Burrito',
@@ -76,7 +82,8 @@ export const Provider = props => {
                 base_price: 8.95,
                 modifiers: ['size', 'tortilla', 'beans', 'cheese', 'other toppings', 'salsa', 'spice level', 'extras'],
                 calories: { min: 600, max: 1510 },
-                featured: false
+                featured: false,
+                selected_modifiers: []
             },
             {
                 name: 'Shrimp Burrito',
@@ -85,7 +92,8 @@ export const Provider = props => {
                 base_price: 8.95,
                 modifiers: ['size', 'tortilla', 'beans', 'cheese', 'other toppings', 'salsa', 'spice level', 'extras'],
                 calories: { min: 450, max: 1210 },
-                featured: false
+                featured: false,
+                selected_modifiers: []
             },
             {
                 name: 'Haddock Burrito',
@@ -94,7 +102,8 @@ export const Provider = props => {
                 base_price: 8.95,
                 modifiers: ['size', 'tortilla', 'beans', 'cheese', 'other toppings', 'salsa', 'spice level', 'extra'],
                 calories: { min: 550, max: 1370 },
-                featured: false
+                featured: false,
+                selected_modifiers: []
             },
             {
                 name: 'Halibut Burrito',
@@ -103,7 +112,8 @@ export const Provider = props => {
                 base_price: 8.95,
                 modifiers: ['size', 'tortilla', 'beans', 'cheese', 'other toppings', 'salsa', 'spice level', 'extra'],
                 calories: { min: 520, max: 1300 },
-                featured: false
+                featured: false,
+                selected_modifiers: []
             }
         ],
         item_modifiers: [

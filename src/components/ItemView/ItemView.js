@@ -2,6 +2,8 @@ import React from 'react';
 import './ItemView.scss';
 import {Context} from '../../Context';
 
+import ModifierGroup from '../ModifierGroup/ModifierGroup';
+
 const ItemView = () => {
     let [order, setOrder] = React.useContext(Context).order;
     let [restaurant, setRestaurant] = React.useContext(Context).restaurant;
@@ -19,12 +21,7 @@ const ItemView = () => {
             </div>
             {order.activeItem.modifiers.map((modifier, index) => {
                 return (
-                    <div key={index}>
-                        <h1 className="section-title">{modifier}</h1>
-                        {restaurant.item_modifiers.filter((mod) => mod.name === modifier)[0].options.map((option, index) => {
-                            return(<div key={index}>{option.name}</div>);
-                        })}
-                    </div>
+                    <ModifierGroup key={index} name={modifier} options={restaurant.item_modifiers.filter((mod) => mod.name === modifier)[0].options}/>
                 );
             })}
         </div>
