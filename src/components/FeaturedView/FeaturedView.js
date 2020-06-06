@@ -1,6 +1,6 @@
 import React from 'react';
 import './FeaturedView.scss';
-import {Context} from '../../Context';
+import {Context} from '../../contexts/Context';
 
 import MenuItem from '../MenuItem/MenuItem';
 

@@ -3,12 +3,11 @@ import './Header.scss';
 import MealTimeLogo from '../svg/MealTimeLogo';
 import IconChevronDown from '../svg/IconChevronDown';
 import Select from 'react-dropdown-select';
-import {Context} from '../../Context';
+import {Context} from '../../contexts/Context';
 
 const Header = () => {
     let [widget, setWidget] = React.useContext(Context).widget;
     let [restaurant, setRestaurant] = React.useContext(Context).restaurant;
-    let [order, setOrder] = React.useContext(Context).order;
     return(
         <header className="header">
             <div className="header-top">
@@ -22,14 +21,21 @@ const Header = () => {
             <div className="header-middle">
                 <p>Welcome to {restaurant.name} online ordering! Place an order for pickup below!</p>
             </div>
-            <div className="header-location-select">
-                <Select
-                    values={restaurant.location}
-                    options={restaurant.locations}
-                    dropdownGap={0}
-                    onChange={(location)=> setRestaurant({...restaurant, location: location})}
-                />
-            </div>
+            {!!widget.open && widget.activeView !== 'item' && 
+                <div className="header-location-select">
+                    <Select
+                        values={restaurant.location}
+                        options={restaurant.locations}
+                        dropdownGap={0}
+                        onChange={(location)=> setRestaurant({...restaurant, location: location})}
+                    />
+                </div>
+            }
+            {!!widget.open && widget.activeView === 'item' &&
+                <div className="header-progress">
+                    {widget.activeItem.modifiers.map(modifier =><div key={modifier} className="step"></div>)}
+                </div>
+            }
         </header>
     );
 }

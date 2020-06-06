@@ -1,10 +1,10 @@
 import React from 'react';
 import './MenuItem.scss';
-import {Context} from '../../Context';
+import {Context} from '../../contexts/Context';
 
 const MenuItem = props => {
     let [widget, setWidget] = React.useContext(Context).widget;
-    let [order, setOrder] = React.useContext(Context).order;
+
     return(
         <div className="menu-item">
             <div className="left">
@@ -14,7 +14,7 @@ const MenuItem = props => {
             <div className="right">
                 <span className="item-price">{props.item.base_price}</span>
                 <p>{props.calories} <strong>cal</strong></p>
-                <button className="button button-small blue" onClick={()=> {setWidget({...widget, activeView: 'item'}); setOrder({...order, activeItem: props.item}); setOrder({...order, activeItem: props.item})}}>add</button>
+                <button className="button button-small blue" onClick={()=> setWidget({...widget, activeView: 'item', activeItem: props.item})}>add</button>
             </div>
         </div>
     );

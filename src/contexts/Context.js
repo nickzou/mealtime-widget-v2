@@ -5,7 +5,9 @@ export const Context = React.createContext();
 export const Provider = props => {
     const widget = React.useState({
         open: false,
-        activeView: 'featured'
+        activeView: 'featured',
+        activeItem: null,
+        step: 0
     });
     const restaurant = React.useState({
         name: 'Burrito Boyz',
@@ -16,6 +18,7 @@ export const Provider = props => {
         ],
         menu_items: [
             {
+                id: 431543,
                 name: 'Chicken Burrito',
                 category: 'Burritos',
                 description: 'Our classic hearty chicken burrito',
@@ -26,6 +29,7 @@ export const Provider = props => {
                 selected_modifiers: []
             },
             {
+                id: 431544,
                 name: 'Steak Burrito',
                 category: 'Burritos',
                 description: 'Our classic hearty steak burrito',
@@ -36,6 +40,7 @@ export const Provider = props => {
                 selected_modifiers: []
             },
             {
+                id: 431545,
                 name: 'Pulled Pork Burrito',
                 category: 'Burritos',
                 description: 'Our classic hearty pulled pork burrito',
@@ -46,6 +51,7 @@ export const Provider = props => {
                 selected_modifiers: []
             },
             {
+                id: 431546,
                 name: 'Calamari Burrito',
                 category: 'Burritos',
                 description: 'Our classic hearty calamari burrito',
@@ -56,6 +62,7 @@ export const Provider = props => {
                 selected_modifiers: []
             },
             {
+                id: 431547,
                 name: 'Sweet Potato Burrito',
                 category: 'Burritos',
                 description: 'Our classic hearty sweet potato burrito',
@@ -66,6 +73,7 @@ export const Provider = props => {
                 selected_modifiers: []
             },
             {
+                id: 431548,
                 name: 'Ground Soy Burrito',
                 category: 'Burritos',
                 description: 'Our classic hearty ground soy burrito',
@@ -76,6 +84,7 @@ export const Provider = props => {
                 selected_modifiers: []
             },
             {
+                id: 431549,
                 name: 'Bean Burrito',
                 category: 'Burritos',
                 description: 'Our classic hearty bean burrito',
@@ -86,6 +95,7 @@ export const Provider = props => {
                 selected_modifiers: []
             },
             {
+                id: 431550,
                 name: 'Shrimp Burrito',
                 category: 'Burritos',
                 description: 'Our classic hearty shrimp burrito',
@@ -96,6 +106,7 @@ export const Provider = props => {
                 selected_modifiers: []
             },
             {
+                id: 431551,
                 name: 'Haddock Burrito',
                 category: 'Burritos',
                 description: 'Our classic hearty haddock burrito',
@@ -106,6 +117,7 @@ export const Provider = props => {
                 selected_modifiers: []
             },
             {
+                id: 431552,
                 name: 'Halibut Burrito',
                 category: 'Burritos',
                 description: 'Our classic hearty halibut burrito',
@@ -118,6 +130,7 @@ export const Provider = props => {
         ],
         item_modifiers: [
             {
+                id: 150,
                 name: 'size',
                 options: [
                     {
@@ -139,6 +152,7 @@ export const Provider = props => {
                 ]
             },
             {
+                id: 151,
                 name: 'tortilla',
                 options: [
                     {
@@ -152,6 +166,7 @@ export const Provider = props => {
                 ]
             },
             {
+                id: 152,
                 name: 'beans',
                 options: [
                     {
@@ -165,6 +180,7 @@ export const Provider = props => {
                 ]
             },
             {
+                id: 153,
                 name: 'cheese',
                 options: [
                     {
@@ -182,6 +198,7 @@ export const Provider = props => {
                 ]
             },
             {
+                id: 154,
                 name: 'other toppings',
                 options: [
                     {
@@ -243,6 +260,7 @@ export const Provider = props => {
                 ]
             },
             {
+                id: 155,
                 name: 'salsa',
                 options: [
                     {
@@ -256,6 +274,7 @@ export const Provider = props => {
                 ]
             },
             {
+                id: 156,
                 name: 'spice level',
                 options: [
                     {
@@ -289,6 +308,7 @@ export const Provider = props => {
                 ]
             },
             {
+                id: 157,
                 name: 'extras',
                 options: [
                     {
@@ -354,7 +374,7 @@ export const Provider = props => {
     });
     const order = React.useState({
         location: null,
-        activeItem: null
+        items: []
     });
     return(
         <Context.Provider value={{widget: widget, restaurant: restaurant, order: order}}>

@@ -1,6 +1,6 @@
 import React from 'react';
 import './FABButton.scss';
-import {Context} from '../../Context';
+import {Context} from '../../contexts/Context';
 
 const FABButton = () => {
 	let [widget, setWidget] = React.useContext(Context).widget;

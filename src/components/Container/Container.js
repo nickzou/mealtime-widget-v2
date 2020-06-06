@@ -1,7 +1,7 @@
 import React from 'react';
 import Widget from '../Widget/Widget';
 import FABButton from '../FABButton/FABButton';
-import {Context} from '../../Context';
+import {Context} from '../../contexts/Context';
 
 const Container = () => {
   let [widget, setWidget] = React.useContext(Context).widget;

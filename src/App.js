@@ -1,8 +1,7 @@
 import React from 'react';
 import './App.scss';
 import Container from './components/Container/Container';
-import {Provider} from './Context';
-import {Context} from './Context';
+import {Provider} from './contexts/Context';
 
 function App() {
   return (
