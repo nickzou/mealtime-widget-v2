@@ -13,6 +13,19 @@
     background-color: $blue;
     color: white;
   }
+  &.light {
+    @include linear-gradient(to bottom, white 84.38%, $light-grey 100%);
+    color: $indigo;
+  }
+  &.split {
+    justify-content: space-between;
+    svg {
+      height: 16px;
+    }
+    svg * {
+      fill: $indigo;
+    }
+  }
 }
 
 .button-icon {
@@ -27,6 +40,14 @@
   padding-right: 20px;
   height: 20px;
   border-radius: 10px;
+}
+
+.button-large {
+  width: 100%;
+  padding: 4px 14px;
+  height: 40px;
+  border-radius: 4px;
+  font-weight: bold;
 }
 
 h1,h2,h3,h4,h5,h6, p {

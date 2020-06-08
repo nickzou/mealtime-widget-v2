@@ -1,4 +1,5 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+import getModifierPrice from '../functions/getModifierPrice';
 
 export const Context = React.createContext();
 
@@ -7,8 +8,10 @@ export const Provider = props => {
         open: false,
         activeView: 'featured',
         activeItem: null,
-        step: 0
+        activeItemBasePrice: 0,
+        activeItemPrice: 0
     });
+
     const restaurant = React.useState({
         name: 'Burrito Boyz',
         locations: [

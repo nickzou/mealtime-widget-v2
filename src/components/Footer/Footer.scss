@@ -7,4 +7,13 @@
     flex-shrink: 0;
     background-color: $turquoise;
     text-align: center;
+    .button {
+        margin-bottom: 8px;
+        .text {
+            margin-right: auto;
+        }
+        .price {
+            font-weight: normal;
+        }
+    }
 }
