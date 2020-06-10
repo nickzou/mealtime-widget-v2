@@ -1,6 +1,6 @@
 const getModifierPrice = (arr) => {
     return arr.reduce((acc, curr) => {
-        return acc+ curr.option.price;
+        return (acc+ curr.option.price);
     }, 0);
 };
 

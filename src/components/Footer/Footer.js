@@ -5,6 +5,8 @@ import {Context} from '../../contexts/Context';
 import ButtonLarge from '../ButtonLarge/ButtonLarge';
 import IconCart from '../svg/IconCart';
 
+import getModifierPrice from '../../functions/getModifierPrice';
+
 const clickFunc = () => {
     return console.log('this thing has been clicked');
 }
@@ -17,7 +19,7 @@ const Footer = () => {
                 classes={'light footer-button'}
                 split={true}
                 text={'add to order'}
-                price={widget.activeItemPrice}
+                price={(widget.activeItemBasePrice + getModifierPrice(widget.activeItem.selected_modifiers)).toFixed(2)}
                 icon={<IconCart />}
                 clickFunction={clickFunc}
             />}

@@ -21,7 +21,6 @@ const ModifierItem = (props) => {
                                 _.unionBy([props], widget.activeItem.selected_modifiers, 'group')
                             }
                         });
-                        setWidget({...widget, activeItemPrice: (widget.activeItemBasePrice + getModifierPrice(widget.activeItem.selected_modifiers))});
                     }
                 }
                 
