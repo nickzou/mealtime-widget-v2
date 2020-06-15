@@ -2,6 +2,7 @@ import React from 'react';
 import './Header.scss';
 import MealTimeLogo from '../svg/MealTimeLogo';
 import IconChevronDown from '../svg/IconChevronDown';
+import ProgressBar from '../ProgressBar/ProgressBar';
 import Select from 'react-dropdown-select';
 import {Context} from '../../contexts/Context';
 
@@ -31,10 +32,11 @@ const Header = () => {
                     />
                 </div>
             }
-            {!!widget.open && widget.activeView === 'item' &&
-                <div className="header-progress">
-                    {widget.activeItem.modifiers.map(modifier =><div key={modifier} className="step"></div>)}
-                </div>
+            {!!widget.open && widget.activeView !== 'featured' &&
+                <ProgressBar
+                    currentStep={widget.currentOrderStep}
+                    steps={widget.orderSteps}
+                />
             }
         </header>
     );

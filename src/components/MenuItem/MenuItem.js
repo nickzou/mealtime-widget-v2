@@ -15,7 +15,7 @@ const MenuItem = props => {
                 <span className="item-price">{props.item.base_price}</span>
                 <p>{props.calories} <strong>cal</strong></p>
                 <button className="button button-small blue" onClick={()=> {
-                        setWidget({...widget, activeView: 'item', activeItem: props.item, activeItemBasePrice: props.item.base_price, activeItemPrice: props.item.base_price});
+                        setWidget({...widget, activeView: 'item', activeItem: props.item, activeItemBasePrice: props.item.base_price, currentOrderStep: 2});
                     }
                 }>add</button>
             </div>

@@ -16,14 +16,20 @@
   &.light {
     @include linear-gradient(to bottom, white 84.38%, $light-grey 100%);
     color: $indigo;
+    svg * {
+      fill: $indigo;
+    }
+    &:disabled {
+      color: rgba($indigo, 0.4);
+      svg * {
+        fill: rgba($indigo, 0.4);
+      }
+    }
   }
   &.split {
     justify-content: space-between;
     svg {
       height: 16px;
-    }
-    svg * {
-      fill: $indigo;
     }
   }
 }

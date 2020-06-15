@@ -1,5 +1,4 @@
-import React, { useEffect } from 'react';
-import getModifierPrice from '../functions/getModifierPrice';
+import React from 'react';
 
 export const Context = React.createContext();
 
@@ -9,7 +8,26 @@ export const Provider = props => {
         activeView: 'featured',
         activeItem: null,
         activeItemBasePrice: 0,
-        activeItemPrice: 0
+        activeItemPrice: 0,
+        currentOrderStep: 1,
+        orderSteps: [
+            {
+                step: 1,
+                name: 'select'
+            },
+            {
+                step: 2,
+                name: 'customize'
+            },
+            {
+                step: 3,
+                name: 'review'
+            },
+            {
+                step: 4,
+                name: 'pay'
+            }
+        ]
     });
 
     const restaurant = React.useState({

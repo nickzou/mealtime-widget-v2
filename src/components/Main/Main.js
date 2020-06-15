@@ -4,6 +4,7 @@ import {Context} from '../../contexts/Context';
 
 import FeaturedView from '../FeaturedView/FeaturedView';
 import ItemView from '../ItemView/ItemView';
+import CartView from '../CartView/CartView';
 
 const Main = () => {
     const [widget] = React.useContext(Context).widget;
@@ -11,6 +12,7 @@ const Main = () => {
         <main className="main">
             {widget.activeView === 'featured' && <FeaturedView />}
             {widget.activeView === 'item' && <ItemView />}
+            {widget.activeView === 'cart' && <CartView />}
         </main>
     );
 }

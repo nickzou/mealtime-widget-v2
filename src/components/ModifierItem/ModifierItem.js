@@ -2,7 +2,6 @@ import React from 'react';
 import _ from 'lodash';
 import './ModifierItem.scss';
 import {Context} from '../../contexts/Context';
-import getModifierPrice from '../../functions/getModifierPrice';
 
 
 const ModifierItem = (props) => {
@@ -17,10 +16,9 @@ const ModifierItem = (props) => {
                 value={props.option.name}
                 onChange={()=> {
                         setWidget({...widget, activeItem: 
-                            {... widget.activeItem, selected_modifiers: 
-                                _.unionBy([props], widget.activeItem.selected_modifiers, 'group')
-                            }
+                            {...widget.activeItem, selected_modifiers: _.unionBy([props], widget.activeItem.selected_modifiers, 'group')}
                         });
+
                     }
                 }
                 
