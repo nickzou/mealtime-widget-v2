@@ -9,20 +9,22 @@ const ModifierItem = (props) => {
     return(
         <div className="modifier-item">
             <h2 className="modifier-info">{props.option.name}</h2>
-            <span className="modifier-price">{props.option.price}</span>
-            <input
-                type="radio"
-                name={props.group}
-                value={props.option.name}
-                onChange={()=> {
-                        setWidget({...widget, activeItem: 
-                            {...widget.activeItem, selected_modifiers: _.unionBy([props], widget.activeItem.selected_modifiers, 'group')}
-                        });
+            {props.option.price !== 0 && <span className="modifier-price">${props.option.price}</span>}
+            <div className="modifier-input">
+                <input
+                    type="radio"
+                    name={props.group}
+                    value={props.option.name}
+                    onChange={()=> {
+                            setWidget({...widget, activeItem: 
+                                {...widget.activeItem, selected_modifiers: _.unionBy([props], widget.activeItem.selected_modifiers, 'group')}
+                            });
 
+                        }
                     }
-                }
-                
-            />
+                    
+                />
+            </div>
         </div>
     );
 }

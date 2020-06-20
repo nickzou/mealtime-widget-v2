@@ -7,12 +7,13 @@ import IconCart from '../svg/IconCart';
 
 import getModifierPrice from '../../functions/getModifierPrice';
 
-const clickFunc = () => {
-    return console.log('this thing has been clicked');
-}
-
 const Footer = () => {
     let [widget, setWidget] = React.useContext(Context).widget;
+    let [order, setOrder] = React.useContext(Context).order;
+    const addToCart = () => {
+        setWidget({...widget, activeView: 'featured', previousView: widget.activeView});
+        setOrder({...order, items: [...order.items, widget.activeItem]});
+    }
     return(
         <footer className="footer">
             {widget.activeView === 'item' && <ButtonLarge
@@ -21,7 +22,8 @@ const Footer = () => {
                 text={'add to order'}
                 price={(widget.activeItemBasePrice + getModifierPrice(widget.activeItem.selected_modifiers)).toFixed(2)}
                 icon={<IconCart />}
-                clickFunction={clickFunc}
+                disabled={widget.activeView === 'item' && widget.activeItem.selected_modifiers.length < widget.activeItem.modifiers.length}
+                clickFunction={addToCart}
             />}
             <div className="signature">Powered by Mealtime</div>
         </footer>

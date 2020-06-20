@@ -10,10 +10,19 @@
     @extend %text-item-info;
     color: black;
     font-weight: 300;
+    flex-basis: 70%;
 }
 
 .modifier-price {
     @extend %text-item-info;
     color: black;
     font-weight: 300;
+    flex-basis: 15%;
+}
+
+.modifier-input {
+    flex-basis: 15%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
 }

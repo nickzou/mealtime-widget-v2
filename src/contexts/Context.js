@@ -6,6 +6,7 @@ export const Provider = props => {
     const widget = React.useState({
         open: false,
         activeView: 'featured',
+        previousView: null,
         activeItem: null,
         activeItemBasePrice: 0,
         activeItemPrice: 0,

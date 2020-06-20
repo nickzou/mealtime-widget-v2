@@ -13,6 +13,13 @@
     background-color: $blue;
     color: white;
   }
+  &.indigo {
+    background-color: $indigo;
+    color: white;
+    svg * {
+      fill: white;
+    }
+  }
   &.light {
     @include linear-gradient(to bottom, white 84.38%, $light-grey 100%);
     color: $indigo;
@@ -28,9 +35,9 @@
   }
   &.split {
     justify-content: space-between;
-    svg {
-      height: 16px;
-    }
+  }
+  svg {
+    margin-right: 5px;
   }
 }
 
@@ -46,6 +53,9 @@
   padding-right: 20px;
   height: 20px;
   border-radius: 10px;
+  svg {
+    height: 8px;
+  }
 }
 
 .button-large {
@@ -54,6 +64,9 @@
   height: 40px;
   border-radius: 4px;
   font-weight: bold;
+  svg {
+    height: 16px;
+  }
 }
 
 h1,h2,h3,h4,h5,h6, p {
@@ -71,4 +84,8 @@ p {
 
 .modifier-title {
   @extend %text-modifier-title;
+}
+
+.text-align-right {
+  text-align: right;
 }
