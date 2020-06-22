@@ -13,7 +13,9 @@ const FeaturedView = () => {
                 return <MenuItem 
                     key={index}
                     item={item}
+                    price={item.base_price}
                     calories={`${item.calories.min} - ${item.calories.max}`}
+                    addButton={true}
                 />}})}
         </div>
     );

@@ -350,45 +350,40 @@ export const Provider = props => {
                         price: 1.52
                     },
                     {
-                        name: 'Extra Protein',
-                        options: [
-                            {
-                                name: '4oz Calamari (130 cal)',
-                                price: 4.49
-                            },
-                            {
-                                name: '4oz Halibut (336 cal)',
-                                price: 4.49
-                            },
-                            {
-                                name: '4oz Shrimp (150 cal)',
-                                price: 4.49
-                            },
-                            {
-                                name: '4oz Pulled Pork (160 cal)',
-                                price: 3.82
-                            },
-                            {
-                                name: '4oz Steak (340 cal)',
-                                price: 3.82
-                            },
-                            {
-                                name: '4oz Haddock (366 cal)',
-                                price: 4.49
-                            },
-                            {
-                                name: '4oz Chicken (230 cal)',
-                                price: 3.82
-                            },
-                            {
-                                name: '4oz Veggie Soy (75 cal)',
-                                price: 2.49
-                            },
-                            {
-                                name: '4oz Sweet Potato (120 cal)',
-                                price: 1.91
-                            }
-                        ]
+                        name: '4oz Calamari (130 cal)',
+                        price: 4.49
+                    },
+                    {
+                        name: '4oz Halibut (336 cal)',
+                        price: 4.49
+                    },
+                    {
+                        name: '4oz Shrimp (150 cal)',
+                        price: 4.49
+                    },
+                    {
+                        name: '4oz Pulled Pork (160 cal)',
+                        price: 3.82
+                    },
+                    {
+                        name: '4oz Steak (340 cal)',
+                        price: 3.82
+                    },
+                    {
+                        name: '4oz Haddock (366 cal)',
+                        price: 4.49
+                    },
+                    {
+                        name: '4oz Chicken (230 cal)',
+                        price: 3.82
+                    },
+                    {
+                        name: '4oz Veggie Soy (75 cal)',
+                        price: 2.49
+                    },
+                    {
+                        name: '4oz Sweet Potato (120 cal)',
+                        price: 1.91
                     }
                 ]
             }

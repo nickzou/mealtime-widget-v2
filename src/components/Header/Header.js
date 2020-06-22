@@ -27,7 +27,7 @@ const Header = () => {
             </div>
                 {widget.activeView === 'featured' && <div className="header-middle"><p>Welcome to {restaurant.name} online ordering! Place an order for pickup below!</p></div>}
                 {widget.activeView !== 'featured' && <div className="header-middle text-align-right"><Button classes={'button-small pill indigo'} split={true} icon={<IconChevronLeft />} text={'back'} clickFunction={back}/></div>}
-            {!!widget.open && widget.activeView !== 'item' && 
+            {!!widget.open && widget.activeView === 'featured' && 
                 <div className="header-location-select">
                     <Select
                         values={restaurant.location}

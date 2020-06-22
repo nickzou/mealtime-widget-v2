@@ -12,13 +12,16 @@ const MenuItem = props => {
                 <p className="item-description">{props.item.description}</p>
             </div>
             <div className="right">
-                <span className="item-price">${props.item.base_price}</span>
+                <span className="item-price">${props.price}</span>
                 <p>{props.calories} <strong>cal</strong></p>
-                <button className="button button-small blue" onClick={()=> {
+                {!!props.addButton && <button className="button button-small blue" onClick={()=> {
                         setWidget({...widget, activeView: 'item', previousView: widget.activeView, activeItem: props.item, activeItemBasePrice: props.item.base_price, currentOrderStep: 2});
-                    }
-                }>add</button>
+                    }}>add</button>}
             </div>
+            {!!props.under && <div className="under">
+                    {props.underContent}
+                </div>
+            }
         </div>
     );
 }

@@ -1,1 +1,29 @@
 @import '../../scss/utilities';
+
+.cart-view {
+    display: flex;
+    flex-direction: column;
+    height:100%;
+}
+
+.item-modifiers-list {
+    margin: 0;
+    padding-inline-start: 0;
+    list-style: none;
+    font-size: 10px;
+    line-height: 14px;
+}
+
+.cart {
+    height: 65%;
+    flex-shrink: 0;
+    overflow-y: scroll;
+}
+
+.totals {
+    height: calc(35% - 20px);
+    flex-shrink: 0;
+    border-top: 1px solid $light-grey;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
